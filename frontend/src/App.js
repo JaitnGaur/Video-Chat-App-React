@@ -103,7 +103,7 @@ function App() {
 					</div>
 					<div className="video">
 						{callAccepted && !callEnded ?
-							<video playsInline ref={userVideo} autoPlay style={{ width: "300px" }} /> :
+							<video playsInlinev id="uservid" ref={userVideo} autoPlay style={{ width: "300px" }} /> :
 							null}
 					</div>
 				</div>
@@ -139,19 +139,20 @@ function App() {
 								<PhoneIcon fontSize="large" />
 							</IconButton>
 						)}
-						{idToCall}
+
 					</div>
 				</div>
-				<div>
-					{receivingCall && !callAccepted ? (
-						<div className="caller">
-							<h1 >{name} is calling...</h1>
-							<Button variant="contained" color="primary" onClick={answerCall}>
-								Answer
-							</Button>
-						</div>
-					) : null}
-				</div>
+
+			</div>
+			<div>
+				{receivingCall && !callAccepted ? (
+					<div className="caller">
+						<h1 >{name} is calling...</h1>
+						<Button variant="contained" color="primary" onClick={answerCall}>
+							Answer
+						</Button>
+					</div>
+				) : null}
 			</div>
 		</>
 	)
